@@ -1,16 +1,14 @@
-CREATE SEQUENCE car_id
-    START WITH 1
-    INCREMENT BY 1;
+INSERT INTO cars (car_id, identification, active, create_date_time)
+    VALUES
+       (nextval('car_id'), 'AAA-0001', true, now()),
+       (nextval('car_id'), 'AAA-0002', true, now()),
+       (nextval('car_id'), 'AAA-0003', true, now()),
+       (nextval('car_id'), 'AAA-0004', true, now()),
+       (nextval('car_id'), 'AAA-0005', true, now()),
+       (nextval('car_id'), 'AAA-0006', true, now()),
+       (nextval('car_id'), 'AAA-0007', true, now()),
+       (nextval('car_id'), 'AAA-0008', true, now()),
+       (nextval('car_id'), 'AAA-0009', true, now()),
+       (nextval('car_id'), 'AAA-0010', true, now())
+;
 
--- Table: cars
-CREATE TABLE cars
-(
-    car_id INT NOT NULL,
-    identification VARCHAR(50) NOT NULL,
-
-    active boolean default true,
-    create_date_time timestamp with time zone,
-    update_date_time timestamp with time zone,
-
-    CONSTRAINT cars_pkey PRIMARY KEY (car_id)
-);
